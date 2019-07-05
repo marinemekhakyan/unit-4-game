@@ -5,3 +5,16 @@
     width: 800px;
     margin-left: 300px;
 }
+
+#game-name {
+    background-color:#008675;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    width: 400px;
+    margin-left: 40px;
+    padding-left: 30px;
+    padding-top: 10px;
+    height: 90px;
+    
+}
