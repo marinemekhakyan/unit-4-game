@@ -18,3 +18,16 @@
     height: 90px;
     
 }
+
+#instructions {
+    background-color:#B1E4E3;
+    color: grey;
+    font-weight: italic;
+    font-size: 14px;
+    width: 700px;
+    margin-left: 40px;
+    padding-left: 30px;
+    padding-top: 10px;
+    height: 210px;
+    line-height: 2.0;
+}
