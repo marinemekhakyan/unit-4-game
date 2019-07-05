@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 .main-container {
     background-color: #9CDBD9;
     padding-top: 5px;
@@ -29,8 +33,8 @@
     margin-left: 40px;
     padding-left: 30px;
     padding-top: 10px;
-    height: 210px;
-    line-height: 2.0;
+    height: 170px;
+    line-height: 1.5;
 }
 
 #random-number {
@@ -67,10 +71,34 @@
 .crystals {
     clear: both;
     
+    
 }
 
 #crystal1 {
     margin-left: 40px;
     margin-top: 15px;
    
+}
+
+#score-text {
+    margin-left: 40px;
+    margin-top: 15px;
+    width: 400px;
+    background-color: #008675;
+    font-style: bold;
+    font-size: 30px;
+    padding-left: 30px;
+    color: white;
+}
+
+#score {
+    margin-left: 40px;
+    margin-top: 15px;
+    width: 400px;
+    background-color: #008675;
+    font-style: bold;
+    font-size: 30px;
+    padding-left: 30px;
+    color: white;
+    height: 80px;
 }
