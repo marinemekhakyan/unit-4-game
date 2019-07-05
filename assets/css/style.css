@@ -25,9 +25,52 @@
     font-weight: italic;
     font-size: 14px;
     width: 700px;
+    margin-top: 15px;
     margin-left: 40px;
     padding-left: 30px;
     padding-top: 10px;
     height: 210px;
     line-height: 2.0;
+}
+
+#random-number {
+    background-color:#008675;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    width: 400px;
+    margin-left: 40px;
+    padding-left: 30px;
+    padding-top: 10px;
+    height: 100px;
+    position: fixed;
+   
+}
+
+#wins-losses {
+    background-color:#B1E4E3;
+    color: #008675;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100px;
+    margin-left: 20px;
+    margin-right: 250px;
+    padding-left: 30px;
+    padding-top: 10px;
+    height: 105px;
+    position: relative;
+    float: right;
+
+
+}
+
+.crystals {
+    clear: both;
+    
+}
+
+#crystal1 {
+    margin-left: 40px;
+    margin-top: 15px;
+   
 }
