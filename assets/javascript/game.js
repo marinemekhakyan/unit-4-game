@@ -65,4 +65,19 @@ function crystalValues(arr) {
     c4 = arr[3];
 }
 
+function resetGame(x) {
+    crystalNum = [];
+
+    computerRandom (randomN);
+    crystalsRandom (crystals);
+
+    totalScore = 0;
+    $("#score").html(totalScore);
+
+    alert(x);
+}
+computerRandom(randomN);
+crystalsRandom(crystals);
+crystalValues(crystalNum);
+
 })
