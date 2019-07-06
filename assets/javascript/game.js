@@ -105,3 +105,28 @@ $("#crystal-4").on("click", function(){
     totalScore += c4;
     $("#score").html(totalScore);
 });
+
+$(".crystals").on("click", function(){
+
+    if (totalScore === randomNum) {
+        
+        wins++;
+        console.log(totalScore);
+        $("#score").html(totalScore);
+        $("#wins").html("Wins: " + wins);
+
+        setTimeout(function() {resetGame("Yoohoo you win!")
+    }, 2000); 
+    }
+
+    else if (totalScore > randomNum) {
+
+            losses++;
+            $("#score").html(totalScore);
+            $("#losses").html("Losses: " + losses);
+
+            setTimeout(function() {resetGame("Try again!")}, 2000);
+        }
+    
+    
+})
