@@ -3,6 +3,8 @@ $(document).ready(function() {
     //Random number arrays
 
     //Computer choice
+    let wins = 0;
+    let losses = 0;
 
     let randomN = [];
 
@@ -19,15 +21,12 @@ $(document).ready(function() {
     let randomNum;
     let crystalNum = [];
 
-    let c1;
-    let c2; 
-    let c3;
-    let c4;
+    var c1;
+    var c2; 
+    var c3;
+    var c4;
 
-    let totalScore = 0;
-
-    let wins = 0;
-    let losses = 0;
+    var totalScore = 0;
 
  //Functions
 
@@ -65,68 +64,70 @@ function crystalValues(arr) {
     c4 = arr[3];
 }
 
-function resetGame(x) {
-    crystalNum = [];
+    function resetGame(x) {
+        crystalNum = [];
 
-    computerRandom (randomN);
-    crystalsRandom (crystals);
+        computerRandom (randomN);
+        crystalsRandom (crystals);
 
-    totalScore = 0;
-    $("#score").html(totalScore);
-
-    alert(x);
-}
-computerRandom(randomN);
-crystalsRandom(crystals);
-crystalValues(crystalNum);
-
-})
-
-$("#crystal-1").on("click", function() {
-
-    totalScore += c1;
-    $("#score").html(totalScore);
-});
-
-$("#crystal-2").on("click", function() {
-
-    totalScore += c2;
-    $("#score").html(totalScore);
-});
-
-$("#crystal-3").on("click", function(){
-
-    totalScore += c3;
-    $("#score").html(totalScore);
-});
-
-$("#crystal-4").on("click", function(){
-
-    totalScore += c4;
-    $("#score").html(totalScore);
-});
-
-$(".crystals").on("click", function(){
-
-    if (totalScore === randomNum) {
-        
-        wins++;
-        console.log(totalScore);
+        totalScore = 0;
         $("#score").html(totalScore);
-        $("#wins").html("Wins: " + wins);
 
-        setTimeout(function() {resetGame("Yoohoo you win!")
-    }, 2000); 
+        alert(x);
     }
+    computerRandom(randomN);
+    crystalsRandom(crystals);
+    crystalValues(crystalNum);
 
-    else if (totalScore > randomNum) {
 
-            losses++;
+
+    $("#crystal-1").on("click", function() { 
+        console.log('totalScore', totalScore)
+        console.log('c1', c1)
+        totalScore += c1;
+        $("#score").html(totalScore);
+    });
+
+    $("#crystal-2").on("click", function() {
+
+        totalScore += c2;
+        $("#score").html(totalScore);
+    }); 
+
+    $("#crystal-3").on("click", function(){
+
+        totalScore += c3;
+        $("#score").html(totalScore);
+    });
+
+    $("#crystal-4").on("click", function(){
+
+        totalScore += c4;
+        $("#score").html(totalScore);
+    });
+
+    $(".crystals").on("click", function(){
+
+        if (totalScore === randomNum) {
+            
+            wins++;
+            console.log(totalScore);
             $("#score").html(totalScore);
-            $("#losses").html("Losses: " + losses);
+            $("#wins").html("Wins: " + wins);
 
-            setTimeout(function() {resetGame("Try again!")}, 2000);
+            setTimeout(function() {resetGame("Yoohoo you win!")
+        }, 2000); 
         }
-    
-    
+
+        else if (totalScore > randomNum) {
+
+                losses++;
+                $("#score").html(totalScore);
+                $("#losses").html("Losses: " + losses);
+
+                setTimeout(function() {resetGame("You lose, try again!")}, 2000);
+            }
+        
+    })
+
 })
