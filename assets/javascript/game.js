@@ -51,4 +51,18 @@ function crystalsRandom(arr) {
     }
 }
 
+function crystalValues(arr) {
+
+    for (i = 0; i < arr.length; i++) {
+
+        $(".crystals" + (i++)).attr("value", arr[i]);
+        console.log(this);
+    }
+
+    c1 = arr[0];
+    c2 = arr[1];
+    c3 = arr[2];
+    c4 = arr[3];
+}
+
 })
