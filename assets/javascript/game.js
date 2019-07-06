@@ -81,3 +81,27 @@ crystalsRandom(crystals);
 crystalValues(crystalNum);
 
 })
+
+$("#crystal-1").on("click", function() {
+
+    totalScore += c1;
+    $("#score").html(totalScore);
+});
+
+$("#crystal-2").on("click", function() {
+
+    totalScore += c2;
+    $("#score").html(totalScore);
+});
+
+$("#crystal-3").on("click", function(){
+
+    totalScore += c3;
+    $("#score").html(totalScore);
+});
+
+$("#crystal-4").on("click", function(){
+
+    totalScore += c4;
+    $("#score").html(totalScore);
+});
