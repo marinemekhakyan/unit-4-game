@@ -29,6 +29,26 @@ $(document).ready(function() {
     let wins = 0;
     let losses = 0;
 
- 
+ //Functions
+
+ function computerRandom(arr) {
+        
+    let x = arr[Math.floor(Math.random() * arr.length)];
+    randomNum = x;
+    $("#random-number").html(randomNum);
+    console.log("Random Number:" + randomNum);
+}
+
+function crystalsRandom(arr) {
+
+    for (let y = 0; y < 4; y ++) {
+        
+        let a = arr[Math.floor(Math.random() * arr.length)];
+
+        crystalNum.push(a);
+
+        console.log("crystal numbers:" + crystalNum);
+    }
+}
 
 })
