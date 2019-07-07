@@ -47,35 +47,25 @@ body {
     padding-top: 10px;
     height: 100px;
     position: fixed;
-   
 }
 
 #wins-losses {
-    background-color:#9CDBD9;
+    background-color:#B1E4E3;
     color: #008675;
     font-weight: bold;
     font-size: 18px;
     width: 120px;
-    margin-right: 200px;
+    margin-right: 240px;
     padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    height: 105px;
+    height: 100px;
     position: relative;
     float: right;
-
-
 }
 
 .crystals {
     clear: both;
-    
-}
-
-#crystal1 {
-    margin-left: 40px;
-    margin-top: 15px;
-   
 }
 
 #score-text {

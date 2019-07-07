@@ -25,10 +25,10 @@ $(document).ready(function() {
     let c2; 
     let c3;
     let c4;
-
+  
     var totalScore = 0;
 
- //Functions
+ //Random number functions
 
  function computerRandom(arr) {
         
@@ -50,6 +50,8 @@ function crystalsRandom(arr) {
     }
 }
 
+//Crystal values function 
+
 function crystalValues(arr) {
 
     for (i = 0; i < arr.length; i++) {
@@ -63,6 +65,8 @@ function crystalValues(arr) {
     c3 = arr[2];
     c4 = arr[3];
 }
+
+//Game reset function
 
     function resetGame(x) {
         crystalNum = [];
@@ -81,6 +85,7 @@ function crystalValues(arr) {
     crystalValues(crystalNum);
 
 
+//Individual crystal event functions
 
     $("#crystal-1").on("click", function() { 
         console.log('totalScore', totalScore)
@@ -109,6 +114,8 @@ function crystalValues(arr) {
 
     $(".crystals").on("click", function(){
 
+//Conditional functions declaring win or lose
+
         if (totalScore === randomNum) {
             
             wins++;
@@ -116,8 +123,7 @@ function crystalValues(arr) {
             $("#score").html(totalScore);
             $("#wins").html("Wins: " + wins);
 
-            setTimeout(function() {resetGame("Yoohoo you win!")
-        }, 1000); 
+            setTimeout(function() {resetGame("Yoohoo you win!")}, 1000); 
         }
 
         else if (totalScore > randomNum) {
