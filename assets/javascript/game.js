@@ -21,10 +21,10 @@ $(document).ready(function() {
     let randomNum;
     let crystalNum = [];
 
-    var c1;
-    var c2; 
-    var c3;
-    var c4;
+    let c1;
+    let c2; 
+    let c3;
+    let c4;
 
     var totalScore = 0;
 
@@ -69,6 +69,7 @@ function crystalValues(arr) {
 
         computerRandom (randomN);
         crystalsRandom (crystals);
+        crystalValues(crystalNum);
 
         totalScore = 0;
         $("#score").html(totalScore);
@@ -116,7 +117,7 @@ function crystalValues(arr) {
             $("#wins").html("Wins: " + wins);
 
             setTimeout(function() {resetGame("Yoohoo you win!")
-        }, 2000); 
+        }, 1000); 
         }
 
         else if (totalScore > randomNum) {
@@ -125,7 +126,7 @@ function crystalValues(arr) {
                 $("#score").html(totalScore);
                 $("#losses").html("Losses: " + losses);
 
-                setTimeout(function() {resetGame("You lose, try again!")}, 2000);
+                setTimeout(function() {resetGame("You lose, try again!")}, 1000);
             }
         
     })
